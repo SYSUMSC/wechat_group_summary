@@ -209,3 +209,6 @@ __marimo__/
 # refs - ignore subdirectories but keep .gitkeep
 refs/*
 !refs/.gitkeep
+.wechat-group-summary/
+outputs/
+wechat_group_summary.toml

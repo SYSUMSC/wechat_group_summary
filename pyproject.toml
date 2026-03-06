@@ -1,0 +1,29 @@
+[project]
+name = "wechat-group-summary"
+version = "0.1.0"
+description = "CLI for summarizing WeFlow WeChat group chats with OpenAI-compatible LLMs"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "httpx>=0.28.1,<0.29",
+  "openai>=1.68.2,<2",
+  "pydantic>=2.10.6,<3",
+  "rich>=13.9.4,<14",
+  "typer>=0.15.2,<0.16",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.5,<9",
+]
+
+[project.scripts]
+wechat-group-summary = "wechat_group_summary.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
